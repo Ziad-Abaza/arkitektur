@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
+  AOS.init();
   function aos_init() {
     AOS.init({
       duration: 1000,
