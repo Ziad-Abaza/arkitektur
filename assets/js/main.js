@@ -4,13 +4,15 @@
 (function ($) {
   "use strict";
 
-  window.addEventListener('load', function () {
-    var loader = document.getElementById('loader');
-    loader.style.display = 'none';
-    
-});
-
-
+  // Spinner
+  var spinner = function () {
+    setTimeout(function () {
+      if ($("#spinner").length > 0) {
+        $("#spinner").removeClass("show");
+      }
+    }, 1);
+  };
+  spinner();
 
   // Initiate the wowjs
   new WOW().init();
