@@ -1,15 +1,16 @@
+/******************************************************************************* */
+/*                                  Main Script                                  */
+/******************************************************************************* */
 (function ($) {
   "use strict";
 
-  // Spinner
-  var spinner = function () {
-    setTimeout(function () {
-      if ($("#spinner").length > 0) {
-        $("#spinner").removeClass("show");
-      }
-    }, 1);
-  };
-  spinner();
+  window.addEventListener('load', function () {
+    var loader = document.getElementById('loader');
+    loader.style.display = 'none';
+    
+});
+
+
 
   // Initiate the wowjs
   new WOW().init();
@@ -62,29 +63,22 @@
   });
 })(jQuery);
 
-/**
- * Template Name: Impact
- * Updated: May 30 2023 with Bootstrap v5.3.0
- * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+/******************************************************************************* */
+/*                                  Template Details                              */
+/******************************************************************************* */
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
-  /**
-   * Porfolio isotope and filter
-   */
+
+  /******************************************************************************* */
+  /*                                  Portfolio Isotope and Filter                 */
+  /******************************************************************************* */
   let projectsnIsotope = document.querySelector(".projects-isotope");
 
   if (projectsnIsotope) {
-    let projectsFilter = projectsnIsotope.getAttribute(
-      "data-projects-filter"
-    )
+    let projectsFilter = projectsnIsotope.getAttribute("data-projects-filter")
       ? projectsnIsotope.getAttribute("data-projects-filter")
       : "*";
-    let projectsLayout = projectsnIsotope.getAttribute(
-      "data-projects-layout"
-    )
+    let projectsLayout = projectsnIsotope.getAttribute("data-projects-layout")
       ? projectsnIsotope.getAttribute("data-projects-layout")
       : "masonry";
     let projectsSort = projectsnIsotope.getAttribute("data-projects-sort")
@@ -127,16 +121,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  /******************************************************************************* */
+  /*                                  AOS Initialization                           */
+  /******************************************************************************* */
   AOS.init();
+
   function aos_init() {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
-      mirror: false
+      mirror: false,
     });
   }
-  window.addEventListener('load', () => {
+
+  window.addEventListener("load", () => {
     aos_init();
   });
 });
