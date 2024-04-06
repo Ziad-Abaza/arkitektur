@@ -55,6 +55,7 @@ h5, h6, .h5, .h6, .fw-normal {
 	z-index: 99999;
 	background: linear-gradient(to right, var(--bs-secondary), var(--bs-primary));
 	background-size: cover;
+	height: 200vh !important;
 }
 
 #spinner.show {
