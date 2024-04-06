@@ -265,6 +265,12 @@ h5, h6, .h5, .h6, .fw-normal {
 	background: rgba(0, 0, 0, 0.5);
 }
 
+.Carousel-text h1{
+	font-size: calc(1.625rem + 4.5vw);
+	font-weight: 300;
+	line-height: 1.2;
+}
+
 @media (max-width:768px) {
 	.header-carousel .owl-carousel-item {
 		position: relative;
@@ -282,6 +288,14 @@ h5, h6, .h5, .h6, .fw-normal {
 		font-size: 16px !important;
 	}
 
+}
+
+@media (max-width:580px) {
+	.Carousel-text h1{
+		font-size: calc(0.625rem + 4.5vw);
+		font-weight: 300;
+		line-height: 1.2;
+	}
 }
 
 .header-carousel .owl-dots {
@@ -672,172 +686,115 @@ h5, h6, .h5, .h6, .fw-normal {
 	color: var(--bs-primary);
 }
 
-/*--------------------------------------------------------------
-  # projects Details Section
-  --------------------------------------------------------------*/
+/******************************************************************************* */
+/*                               page Team Member                                */
+/******************************************************************************* */
+.custom-card {
+	position: relative;
+	width: 300px;
+	height: 384px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	border-radius: 20px;
+	background: var(--bs-light);
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+}
 
-/* .projects-details .projects-details-slider img {
-    width: 100%;
-  }
-  
-  .projects-details .projects-details-slider .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.7);
-    opacity: 1;
-  }
-  
-  .projects-details .projects-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--bs-primary);
-  }
-  
-  .projects-details .swiper-button-prev,
-  .projects-details .swiper-button-next {
-    width: 48px;
-    height: 48px;
-  }
-  
-  .projects-details .swiper-button-prev:after,
-  .projects-details .swiper-button-next:after {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.2);
-    font-size: 24px;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-  }
-  
-  .projects-details .swiper-button-prev:hover:after,
-  .projects-details .swiper-button-next:hover:after {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  @media (max-width: 575px) {
-  
-    .projects-details .swiper-button-prev,
-    .projects-details .swiper-button-next {
-      display: none;
-    }
-  }
-  
-  .projects-details .projects-info h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
-  }
-  
-  .projects-details .projects-info h3:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--bs-primary);
-    left: 0;
-    bottom: 0;
-  }
-  
-  .projects-details .projects-info ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-  }
-  
-  .projects-details .projects-info ul li {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-    font-size: 16px;
-  }
-  
-  .projects-details .projects-info ul strong {
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #9c9c9c;
-    font-size: 12px;
-  }
-  
-  .projects-details .projects-info .btn-visit {
-    padding: 8px 40px;
-    background: var(--bs-primary);
-    color: #fff;
-    border-radius: 50px;
-    transition: 0.3s;
-  }
-  
-  .projects-details .projects-info .btn-visit:hover {
-    background: #009d8b;
-  }
-  
-  .projects-details .projects-description h2 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .projects-details .projects-description p {
-    padding: 0;
-  }
-  
-  .projects-details .projects-description .testimonial-item {
-    padding: 30px 30px 0 30px;
-    position: relative;
-    background: white;
-    height: 100%;
-    margin-bottom: 50px;
-  }
-  
-  .projects-details .projects-description .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50px;
-    border: 6px solid #fff;
-    float: left;
-    margin: 0 10px 0 0;
-  }
-  
-  .projects-details .projects-description .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    padding-top: 20px;
-  }
-  
-  .projects-details .projects-description .testimonial-item h4 {
-    font-size: 14px;
-    color: #6c757d;
-    margin: 0;
-  }
-  
-  .projects-details .projects-description .testimonial-item .quote-icon-left,
-  .projects-details .projects-description .testimonial-item .quote-icon-right {
-    color: #009d8b;
-    font-size: 26px;
-    line-height: 0;
-  }
-  
-  .projects-details .projects-description .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-  }
-  
-  .projects-details .projects-description .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-    transform: scale(-1, -1);
-  }
-  
-  .projects-details .projects-description .testimonial-item p {
-    font-style: italic;
-    margin: 0 0 15px 0 0 0;
-    padding: 0;
-  }
-   */
+.custom-card:hover {
+	transform: translateY(-10px);
+}
+
+.custom-card-img {
+	height: 192px;
+	width: 100%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover .custom-card-img {
+	transform: scale(1.1);
+}
+
+.custom-card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+	transition: transform 0.3s ease-in-out;
+}
+
+.custom-card-img img:hover {
+	transform: scale(1.1);
+}
+
+.custom-card-avatar {
+	position: absolute;
+	width: 114px;
+	height: 114px;
+	background: var(--bs-primary);
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: calc(50% - 57px);
+	transition: background-color 0.3s ease-in-out;
+}
+
+.custom-card-avatar:hover {
+	background: var(--bs-dark-primary);
+}
+
+.custom-card-avatar img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.custom-card-avatar img:hover {
+	transform: scale(1.1);
+}
+
+.custom-card-title {
+	margin-top: 60px;
+	font-weight: 500;
+	font-size: 18px;
+	color: var(--bs-primary);
+	transition: color 0.3s ease-in-out;
+}
+
+.custom-card:hover .custom-card-title {
+	color: var(--bs-dark-primary);
+}
+
+.custom-card-subtitle {
+	margin-top: 10px;
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--bs-dark-primary);
+	transition: color 0.3s ease-in-out;
+}
+
+.custom-card:hover .custom-card-subtitle {
+	color: var(--bs-primary);
+}
+
+.btn:hover {
+	transform: scale(1.1);
+}
+
+/******************************************************************************* */
+/*                                  page projects                                */
+/******************************************************************************* */
+.project-pg-img{
+	width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-pg-project{
+	height: 450px;
+}
