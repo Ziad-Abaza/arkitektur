@@ -798,3 +798,29 @@ h5, h6, .h5, .h6, .fw-normal {
 .card-pg-project{
 	height: 450px;
 }
+
+/******************************************************************************* */
+/*                                  Committee page                               */
+/******************************************************************************* */
+.committee-heads-img{
+	max-width: 240px !important;
+	width: 100% !important;
+}
+
+@media (max-width:575px) {
+	.Committee-title h2, .Committee-title p{
+		letter-spacing: 1px !important;
+	}
+
+}
+
+/******************************************************************************* */
+/*                                  feature page                               */
+/******************************************************************************* */
+.feature-item{
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
